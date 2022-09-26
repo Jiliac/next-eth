@@ -1,7 +1,7 @@
-import { ConnectButton } from '@rainbow-me/rainbowkit'
-import Link from 'next/link'
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Link from "next/link";
 
-const Header: React.FC = () => {
+const Navbar: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-10 flex items-center justify-between p-4 bg-opacity-50 backdrop-filter backdrop-blur lg:px-12 lg:py-4">
       <div>
@@ -15,7 +15,7 @@ const Header: React.FC = () => {
         <ConnectButton />
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Navbar;

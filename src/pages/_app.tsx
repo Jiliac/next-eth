@@ -1,28 +1,28 @@
-import '../../styles/globals.css'
-import '@rainbow-me/rainbowkit/styles.css'
+import "../../styles/globals.css";
+import "@rainbow-me/rainbowkit/styles.css";
 
-import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit'
-import type { AppProps } from 'next/app'
-import Head from 'next/head'
-import { Toaster } from 'react-hot-toast'
-import { chain, configureChains, createClient, WagmiConfig } from 'wagmi'
-import { publicProvider } from 'wagmi/providers/public'
+import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import { Toaster } from "react-hot-toast";
+import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+import { publicProvider } from "wagmi/providers/public";
 
 const { chains, provider } = configureChains(
   [chain.polygon],
   [publicProvider()]
-)
+);
 
 const { connectors } = getDefaultWallets({
-  appName: 'My Web3 App',
-  chains
-})
+  appName: "My Web3 App",
+  chains,
+});
 
 const wagmiClient = createClient({
   autoConnect: true,
   connectors,
-  provider
-})
+  provider,
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;
