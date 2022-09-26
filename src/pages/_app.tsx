@@ -1,12 +1,14 @@
-import "../../styles/globals.css";
-import "@rainbow-me/rainbowkit/styles.css";
-
-import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
+import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { publicProvider } from "wagmi/providers/public";
+
+import "@rainbow-me/rainbowkit/styles.css";
+import "../../styles/globals.css";
+
+import Navbar from "@components/navbar";
 
 const { chains, provider } = configureChains(
   [chain.polygon],
@@ -32,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <title>Welcome to Web3!</title>
         </Head>
         <Toaster position="bottom-left" />
+        <Navbar />
         <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>

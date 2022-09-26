@@ -3,18 +3,16 @@ import Link from "next/link";
 
 const Navbar: React.FC = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 flex items-center justify-between p-4 bg-opacity-50 backdrop-filter backdrop-blur lg:px-12 lg:py-4">
-      <div>
+    <div className="navbar bg-slate-200 shadow-lg">
+      <div className="flex-1">
         <Link href="/">
-          <a className="flex items-center space-x-2 text-xl ">
-            <span className="hidden text-xl md:block">Your Metaverse</span>
-          </a>
+          <a className="btn btn-ghost normal-case text-xl">Your DApp</a>
         </Link>
       </div>
-      <div className="flex">
+      <div className="flex-none">
         <ConnectButton />
       </div>
-    </header>
+    </div>
   );
 };
 
