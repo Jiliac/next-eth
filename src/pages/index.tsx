@@ -6,6 +6,7 @@ export default function Home() {
           Open <span className="italic font-bold">`src/pages/index.tsx`</span>{" "}
           and start building
         </div>
+        <button className="btn btn-primary">A Button</button>
       </div>
     </div>
   );

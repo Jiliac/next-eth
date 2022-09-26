@@ -10,10 +10,10 @@
     "simple-import-sort",
     "prettier"
   ],
-  "extends": ["next", "next/core-web-vitals"],
+  "extends": ["standard", "plugin:prettier/recommended"],
   "rules": {
     "prettier/prettier": ["error"],
-    "quotes": ["error", "double"],
+    "quotes": ["error", "double"]
     "react/prop-types": "off",
     "react/no-unescaped-entities": "off",
     "no-unused-vars": "warn",
@@ -22,6 +22,8 @@
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@next/next/no-img-element": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
     "jsx-a11y/role-supports-aria-props": "off"
   }
 }
