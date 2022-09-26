@@ -34,8 +34,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           <title>Welcome to Web3!</title>
         </Head>
         <Toaster position="bottom-left" />
-        <Navbar />
-        <Component {...pageProps} />
+        <div className="min-h-screen">
+          <Navbar />
+          <Component {...pageProps} />
+        </div>
       </RainbowKitProvider>
     </WagmiConfig>
   );
