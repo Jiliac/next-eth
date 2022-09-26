@@ -16,6 +16,7 @@
   "dependencies": {
     "@rainbow-me/rainbowkit": "0.6.1",
     "@tailwindcss/typography": "^0.5.7",
+    "alchemy-sdk": "^2.0.5-rc1",
     "daisyui": "^2.31.0",
     "ethers": "5.7.1",
     "next": "12.3.1",

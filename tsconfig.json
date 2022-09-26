@@ -15,6 +15,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "strict": false,
     "baseUrl": ".",
     "paths": {
       "@utils*": ["src/utils*"],
@@ -22,6 +23,6 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./scripts", "./test"],
-  "exclude": ["node_modules", "dist", ".next", "next.config.js"],
+  "exclude": ["node_modules", "dist", ".next", "next.config.js", "src/pages/hidden"],
   "files": ["./hardhat.config.ts"]
 }
